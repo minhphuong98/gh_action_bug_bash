@@ -15,3 +15,4 @@ jobs:
         with:
           rules: 'rules/rule.guard'
           data: 'data/data.yaml'
+
