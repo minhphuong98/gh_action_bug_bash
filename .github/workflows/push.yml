@@ -13,5 +13,5 @@ jobs:
       - name: CloudFormation Guard validate
         uses: aws-cloudformation/cloudformation-guard@action-v0.0.3
         with:
-          rules: './rules/rule.guard'
-          data: './data/data.yaml'
+          rules: '../../rules/rule.guard'
+          data: '../../data/data.yaml'
