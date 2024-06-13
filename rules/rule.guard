@@ -4,8 +4,8 @@ rule S3_BUCKET_PUBLIC_READ_PROHIBITED when %s3_bucket_public_read_prohibited !em
   %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration exists
   %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.BlockPublicAcls == true
   %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.BlockPublicPolicy == true
-  %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.IgnorePublicAcls == true
-  %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.RestrictPublicBuckets == true
+  %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.IgnorePublicAcls == false
+  %s3_bucket_public_read_prohibited.Properties.PublicAccessBlockConfiguration.RestrictPublicBuckets == false
   <<
     Violation: S3 Bucket Public Write Access controls need to be restricted.
     Fix: Set S3 Bucket PublicAccessBlockConfiguration properties for BlockPublicAcls, BlockPublicPolicy, IgnorePublicAcls, RestrictPublicBuckets parameters to true.
